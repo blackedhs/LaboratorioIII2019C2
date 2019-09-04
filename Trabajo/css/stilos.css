@@ -1,0 +1,32 @@
+body{
+    
+}
+.site-header{   
+    background: url("../img/header.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+.contenido-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+.navegacion a{
+    text-decoration: none;
+    color: white;
+
+}
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.site-header h1{
+    color: white;
+}
