@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Bienes Raices</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" id="Frm">
+            <legend>Anuncios: </legend>
+            <div class="form-group row">
+                <div class="col-md-8" id="divId" >
+                    <label class="form-check-label " for='Id'>Id:</label>
+                    <input type='text' class="form-control" name='Id' id='Id' value="0" disabled>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-8">
+                    <label class="form-check-label " for='Titulo'>Titulo:</label>
+                    <input type='text' class="form-control" name='Titulo' id='Titulo' value="casa" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-8">
+                    <label class="form-check-label " for='Transaccion'>Transaccion:</label>
+                    <div class="form-check col-md-2 offset-md-2">
+                        <input type='radio' class="form-check-input" name='Transaccion' id='Venta' value='Venta'
+                            checked>Venta
+                    </div>
+                    <div class="form-check col-md-2 offset-md-2">
+                        <input type='radio' class="form-check-input" name='Transaccion' id='Alquiler'
+                            value='Alquiler'>Alquiler
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-8">
+                    <label class="form-check-label " for='Descripcion'>Descripcion:</label>
+                    <input type='text' class="form-control" name='Descripcion' id='Descripcion' value="casa de campo" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-8">
+                    <label class="form-check-label " for='Precio'>Precio:</label>
+                    <input type='number' class="form-control" name='Precio' id='Precio' min=0 value="1500" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-8">
+                    <label class="form-check-label " for='Baños'>Numero de Baños:</label>
+                    <input type='number' class="form-control" name='Baños' id='Baños' min=0 value="2" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-8">
+                    <label class="form-check-label " for='Estacionamientos'>Estacionamientos:</label>
+                    <input type='number' class="form-control" name='Autos' id='Autos' min=0 value="3" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-8">
+                    <label class="form-check-label " for='Dormitorios'>Dormitorios:</label>
+                    <input type='number' class="form-control" name='Dormis' id='Dormis' min=0 value="4" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-8">
+                    <button type='submit' class="btn btn-primary" id='Guardar'>Guardar</button>
+                    <button type='button' class="btn btn-secondary" id='Limpiar'>Limpiar</button>
+                    <button type='button' class="btn btn-warning" id='Cancelar'>Cancelar</button>
+                </div>
+            </div>
+            <div class="form-group col">
+                <div class="col-md-4">
+                    <label for="selTransaccion">Transaccion</label>
+                    <select id="selTransaccion"></select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="form-check">
+                    <input type="checkbox" name="chkId" id="chkId" value="Id" checked>Id
+                    <input type="checkbox" name="chkTitulos" id="chkTitulos" value="Titulo" checked>Titulos
+                    <input type="checkbox" name="chkTransaccion" id="chkTransaccion" value="Transaccion" checked>Transaccion
+                    <input type="checkbox" name="chkPrecio" id="chkPrecio" value="Precio" checked>Precio
+                    <input type="checkbox" name="chkDescripcion" id="chkDescripcion" value="Descripcion" checked>Descripcion
+                    <input type="checkbox" name="chkBaños" id="chkBaños" value="Baños" checked>Baños
+                    <input type="checkbox" name="chkCocheras" id="chkCocheras" value="Autos" checked>Cocheras
+                    <input type="checkbox" name="chkHabitaciones" id="chkHabitaciones" value="Dormis" checked>Habitaciones
+                </div>
+            </div>
+        </form>
+        <div id='DivTabla' class="col-md-10"></div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./js/miTypeScript.js"></script>
+    <script src="./js/tablehelper.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
